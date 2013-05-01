@@ -55,7 +55,7 @@ arranged in a two-by-two arrangement like so:
 
 You would modify the script like so:
 
-> $u = [ 
+>    $u = [ 
 >        [ '1:1', '1:2', '3:1', '3:2' ],
 >        [ '1:3', '1:4', '3:3', '3:4' ],
 >        [ '1:5', '1:6', '3:5', '3:6' ],
@@ -64,7 +64,7 @@ You would modify the script like so:
 >        [ '2:3', '2:4', '4:3', '4:4' ],
 >        [ '2:5', '2:6', '4:5', '4:6' ],
 >        [ '2:7', '2:8', '4:7', '4:8' ]
-> ];
+>     ];
 
 See the script comments for further details.
 
