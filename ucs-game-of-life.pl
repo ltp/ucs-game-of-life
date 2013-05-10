@@ -52,13 +52,18 @@ $u = [
 ];
 
 my $game = Game::Life->new( [6,8] );
-my $starting = [ 
-                [ 1, 1, 1 ],
-                [ 1, 0, 0 ],
-                [ 0, 1, 0 ] 
-               ];  
+my $starting = [
+                [ 1, 1, 1, 0, 1, 0 ],
+                [ 1, 0, 0, 1, 1, 1 ],
+                [ 0, 1, 0, 0, 1, 0 ],
+                [ 0, 0, 1, 0, 0, 1 ],
+                [ 1, 0, 1, 0, 1, 0 ],
+                [ 1, 1, 0, 1, 0, 0 ],
+                [ 0, 1, 1, 0, 0, 1 ],
+                [ 0, 1, 1, 0, 1, 1 ] 
+               ]; 
 
-$game->place_points( 4, 4, $starting );
+$game->place_points( 0, 0, $starting );
 
 for (1..20) {
         my $grid = $game->get_grid();
@@ -70,13 +75,15 @@ for (1..20) {
                 foreach my $column ( @$row ) {
                         print ( $column ? 'X' : '.' );
                         my ( $chassis, $blade ) = split /:/, $u->[$r]->[$c];
-                        $ucs->chassis($chassis)->blade($blade)->( ( $column ? 'on' : 'off' ) )
+                        $ucs->chassis($chassis)->blade($blade)->led( ( $column ? 'on' : 'off' ) );
+			$c++
                 }
         
+		$r++;
                 print "\n"
         }
-                
-        sleep 10;       
+
+        sleep 3;
         system(clear);  
         $game->process();
 }   
