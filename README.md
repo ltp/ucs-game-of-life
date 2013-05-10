@@ -72,7 +72,7 @@ Note that this script will work best (only?) if your chassis are fully-populated
 and arranged as a square or rectangular shape.
 
 When you have configured the script for your environment, the script will 
-run for 20 generations with a ten second gap between each generation.
+run for 20 generations with a three second gap between each generation.
 
 Note that there may be some delay between all lights updating for each generation
 due to the delay of UCSM actioning the led action.
