@@ -4,9 +4,9 @@ Readme
 What
 ----
 
-This hacky little script implements
+This dinky little script implements
 [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) 
-using the locator LED's of blades in a 
+using the locator LEDs of blades in a 
 [Cisco UCS cluster](http://en.wikipedia.org/wiki/Cisco_Unified_Computing_System).
 
 Why
@@ -19,9 +19,9 @@ particularly by the implementation of Conway's Game of Life on
 How
 ---
 
-To use this script you must have the latest version (0.031) of the 
-[Cisco::UCS](https://metacpan.org/release/Cisco-UCS) installed in addition to 
-my forked version of the [Game::Life](https://github.com/ltp/Game-Life) module.
+To use this script you must have at least version 0.031 of the
+[Cisco::UCS](https://metacpan.org/release/Cisco-UCS) module installed in addition to 
+at least version 0.05 of the [Game::Life](https://metacpan.org/release/Game-Life) module.
 
 You will also need to edit the script so as to specify your UCS cluster 
 information (hostname, username and password) and you will also likely
